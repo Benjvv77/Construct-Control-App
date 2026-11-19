@@ -12,12 +12,13 @@
 <!-- NAVBAR -->
 <nav class="navbar">
   <div class="nav-logo">
-    <a href ="index.php"> 
-        <a href="<?= e(route('inicio')) ?>"><img src="<?= e(asset('images/logo.png')) ?>" alt="ConstructControl logo"></a>
-    </a>
-    
+    <a href="<?= e(route('inicio')) ?>"><img src="<?= e(asset('images/logo.png')) ?>" alt="ConstructControl logo"></a>
   </div>
-  <div class="nav-links">
+  <button type="button" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links"
+          onclick="var n=this.closest('.navbar'),a=n.classList.toggle('abierto');this.setAttribute('aria-expanded',a);this.setAttribute('aria-label',a?'Cerrar menú':'Abrir menú');">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="nav-links" onclick="if(event.target.closest('a.nav-link'))this.closest('.navbar').classList.remove('abierto')">
     <a href="#quienes" class="nav-link">Quiénes somos</a>
     <a href="#mv" class="nav-link">Misión y visión</a>
     <a href="#valores" class="nav-link">Valores</a>

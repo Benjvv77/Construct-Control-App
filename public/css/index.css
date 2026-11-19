@@ -618,3 +618,245 @@ footer {
     border-top:1px solid rgba(255,255,255,0.08);
     padding-top:16px;
 }
+
+/* ── MENÚ (botón solo visible en pantallas angostas) ── */
+.nav-toggle {
+    display:none;
+}
+
+/* ── TABLETS ── */
+@media (max-width: 980px) {
+    .navbar {
+        padding:0 20px;
+    }
+
+    .nav-toggle {
+        display:inline-flex;
+        flex-direction:column;
+        justify-content:center;
+        gap:5px;
+        width:44px;
+        height:44px;
+        padding:0 11px;
+        border:1px solid var(--border);
+        border-radius:10px;
+        background:var(--white);
+        cursor:pointer;
+    }
+
+    .nav-toggle span {
+        display:block;
+        height:2px;
+        border-radius:2px;
+        background:var(--brown-600);
+        transition:transform .2s, opacity .2s;
+    }
+
+    .navbar.abierto .nav-toggle span:nth-child(1) {
+        transform:translateY(7px) rotate(45deg);
+    }
+
+    .navbar.abierto .nav-toggle span:nth-child(2) {
+        opacity:0;
+    }
+
+    .navbar.abierto .nav-toggle span:nth-child(3) {
+        transform:translateY(-7px) rotate(-45deg);
+    }
+
+    .nav-links {
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        right:0;
+        flex-direction:column;
+        align-items:stretch;
+        gap:2px;
+        padding:10px 16px 16px;
+        background:var(--white);
+        border-bottom:1px solid var(--border);
+        box-shadow:0 12px 24px rgba(79,47,14,0.08);
+    }
+
+    .navbar.abierto .nav-links {
+        display:flex;
+    }
+
+    .nav-link {
+        padding:12px 14px;
+        font-size:15px;
+    }
+
+    .btn-login-nav {
+        margin:8px 0 0;
+        padding:12px 20px;
+        text-align:center;
+        font-size:14px;
+    }
+
+    .user-chip {
+        display:flex;
+        flex-direction:column;
+        gap:6px;
+        padding:10px 14px 0;
+        border-top:1px solid var(--border-light);
+        margin-top:6px;
+        font-size:13px;
+        color:var(--text-secondary);
+        overflow-wrap:anywhere;
+    }
+
+    .user-chip form,
+    .user-chip .btn-login-nav {
+        display:block !important;
+        width:100%;
+    }
+
+    .hero {
+        flex-direction:column-reverse;
+        text-align:center;
+        gap:24px;
+        padding:48px 24px 56px;
+    }
+
+    .hero-text {
+        max-width:600px;
+    }
+
+    .hero-desc {
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-btns {
+        justify-content:center;
+    }
+
+    .hero-logo-wrap img {
+        width:min(320px, 70vw);
+    }
+
+    section,
+    .porq,
+    .cta {
+        padding:56px 24px;
+    }
+
+    .quienes-grid {
+        grid-template-columns:1fr;
+        gap:28px;
+    }
+
+    .valores-grid {
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .features-grid,
+    .porq-grid {
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    footer {
+        padding:32px 24px;
+    }
+}
+
+/* ── CELULARES ── */
+@media (max-width: 640px) {
+    .navbar {
+        padding:0 16px;
+    }
+
+    .nav-logo img {
+        height:52px;
+    }
+
+    .hero {
+        padding:36px 18px 44px;
+    }
+
+    .hero-title {
+        font-size:30px;
+    }
+
+    .hero-desc {
+        font-size:14px;
+        margin-bottom:24px;
+    }
+
+    .btn-hero-primary {
+        width:100%;
+        text-align:center;
+    }
+
+    .hero-logo-wrap img {
+        width:min(220px, 60vw);
+    }
+
+    section,
+    .porq,
+    .cta {
+        padding:44px 18px;
+    }
+
+    .section-title,
+    .cta-title {
+        font-size:24px;
+    }
+
+    .quienes-grid,
+    .mv-grid,
+    .valores-grid,
+    .features-grid,
+    .porq-grid {
+        margin-top:24px;
+    }
+
+    .mv-grid,
+    .features-grid,
+    .porq-grid {
+        grid-template-columns:1fr;
+    }
+
+    .valores-grid {
+        grid-template-columns:1fr 1fr;
+    }
+
+    .valor-card:last-child {
+        grid-column:1 / -1;
+    }
+
+    .mv-card {
+        padding:24px 20px;
+    }
+
+    .objetivo-box {
+        flex-direction:column;
+        text-align:center;
+        gap:16px;
+        padding:28px 20px;
+        margin-top:24px;
+    }
+
+    .btn-cta {
+        width:100%;
+        justify-content:center;
+        padding:14px 18px;
+        font-size:14px;
+    }
+
+    footer {
+        padding:28px 18px;
+    }
+
+    .footer-top {
+        flex-direction:column;
+        gap:12px;
+        text-align:center;
+    }
+
+    .footer-logo img {
+        height:96px;
+    }
+}

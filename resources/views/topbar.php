@@ -20,6 +20,15 @@ $usuario = auth()->user();
         </div>
     </div>
 
+    <button type="button" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil"
+            onclick="var t=this.closest('.topbar'),a=t.classList.toggle('abierto');this.setAttribute('aria-expanded',a);this.setAttribute('aria-label',a?'Cerrar menú':'Abrir menú');">
+        <span></span><span></span><span></span>
+        <?php if ($usuario->can('administrar') && $gastosPendientes > 0): ?>
+            <i class="menu-toggle-aviso" aria-hidden="true"></i>
+        <?php endif; ?>
+    </button>
+
+    <div class="menu-movil" id="menu-movil">
     <nav class="nav-principal" aria-label="Navegación principal">
         <a href="<?= route('proyectos.index') ?>" class="<?= request()->routeIs('proyectos.*', 'inventario.*') ? 'activo' : '' ?>">Proyectos</a>
         <?php if ($usuario->can('administrar')): ?>
@@ -55,5 +64,6 @@ $usuario = auth()->user();
                 <button type="submit" class="logout-btn">⏎ Cerrar sesión</button>
             </form>
         <?php endif; ?>
+    </div>
     </div>
 </header>
