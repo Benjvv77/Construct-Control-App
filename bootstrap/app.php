@@ -14,6 +14,7 @@ return Application::configure(basePath: dirname(__DIR__))
         web: __DIR__.'/../routes/web.php',
     )
     ->withMiddleware(function (Middleware $middleware): void {
+        $middleware->trustProxies(at: '*');
         $middleware->redirectUsersTo(fn () => route('inicio'));
         $middleware->appendToGroup('web', \App\Http\Middleware\CerrarSesionInactiva::class);
     })
