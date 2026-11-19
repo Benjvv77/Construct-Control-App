@@ -1,0 +1,21 @@
+{
+  "name": "constructcontrol-laravel",
+  "version": "1.0.0",
+  "description": "Versión Laravel del sistema de control de presupuestos, gastos e inventario de obras. La versión PHP original sigue en la carpeta superior (`../app`, `../resources`).",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:bd": "APP_ENV=cypress DB_DATABASE=constructcontrol_cypress php artisan migrate:fresh --seeder=CypressSeeder --force",
+    "cypress:servidor": "APP_ENV=cypress php artisan serve --port=8001"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "cypress": "^16.2.1"
+  }
+}

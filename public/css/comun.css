@@ -1,0 +1,422 @@
+/* Ajustes compartidos para la versión Laravel: formularios en línea y botones POST */
+.form-inline {
+    display:inline;
+    margin:0;
+}
+
+button.logout-btn {
+    background:transparent;
+    cursor:pointer;
+    font-family:inherit;
+}
+
+.alert ul {
+    margin:0;
+    padding-left:18px;
+}
+
+a.filter {
+    display:inline-block;
+    text-decoration:none;
+}
+
+.search-box button {
+    border:none;
+    background:none;
+    cursor:pointer;
+    font-size:14px;
+    padding:0;
+}
+
+.paginacion {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.paginacion-links {
+    display:flex;
+    gap:6px;
+}
+
+.paginacion-links a,
+.paginacion-links span {
+    min-width:34px;
+    padding:7px 10px;
+    border-radius:8px;
+    border:1px solid #E8D9C8;
+    text-align:center;
+    text-decoration:none;
+    font-weight:700;
+    font-size:12px;
+    color:#6E4620;
+    background:white;
+}
+
+.paginacion-links .actual {
+    background:#6E4620;
+    border-color:#6E4620;
+    color:white;
+}
+
+.paginacion-links .deshabilitado {
+    opacity:.45;
+}
+
+.alerta-presupuesto {
+    display:inline-block;
+    margin-top:4px;
+    padding:2px 8px;
+    border-radius:999px;
+    font-size:11px;
+    font-weight:700;
+    background:#FDF0EE;
+    color:#8B2A1A;
+}
+
+button.btn-back {
+    border:none;
+    cursor:pointer;
+    font-family:inherit;
+}
+
+.acciones-fila {
+    display:flex;
+    gap:6px;
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+.btn-eliminar {
+    cursor:pointer;
+    font-family:inherit;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    background:#FDF0EE;
+    color:#8B2A1A;
+    border:1px solid rgba(139,42,26,.25);
+    padding:8px 12px;
+    border-radius:8px;
+    font-size:12px;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+.btn-eliminar:hover {
+    background:#8B2A1A;
+    color:white;
+}
+
+.form-editar-gasto {
+    padding:18px 22px 22px;
+    max-height:70vh;
+    overflow-y:auto;
+}
+
+.nota-material {
+    display:none;
+    background:#FFF7E8;
+    border:1px solid #F0DDB5;
+    color:#7A5C3E;
+    border-radius:8px;
+    padding:10px 12px;
+    font-size:12px;
+    margin:0 0 14px;
+}
+
+.nav-principal {
+    display:flex;
+    gap:4px;
+    align-items:center;
+    margin:0 auto 0 28px;
+}
+
+.nav-principal a {
+    text-decoration:none;
+    color:#7A5C3E;
+    font-weight:700;
+    font-size:13px;
+    padding:9px 14px;
+    border-radius:9px;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+}
+
+.nav-principal a:hover {
+    background:#F5EDE4;
+}
+
+.nav-principal a.activo {
+    background:#F5EDE4;
+    color:#4F2F0E;
+}
+
+.nav-principal .contador {
+    background:#8B2A1A;
+    color:white;
+    border-radius:999px;
+    font-size:11px;
+    min-width:20px;
+    padding:1px 6px;
+    text-align:center;
+}
+
+.selector-proyecto {
+    border:none;
+    outline:none;
+    height:40px;
+    width:100%;
+    background:transparent;
+    font-family:inherit;
+    color:inherit;
+}
+
+a.enlace {
+    color:#6E4620;
+    font-weight:700;
+}
+
+@media (max-width: 900px) {
+    .nav-principal {
+        margin:8px 0;
+        flex-wrap:wrap;
+    }
+}
+
+@media print {
+    .no-print,
+    .nav-principal {
+        display:none !important;
+    }
+}
+
+.grafico-curva {
+    padding:16px 20px 8px;
+}
+
+.grafico-curva svg {
+    width:100%;
+    height:auto;
+}
+
+.form-curva {
+    display:flex;
+    gap:14px;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    padding:16px 20px 20px;
+}
+
+.form-curva label {
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    font-size:12px;
+    font-weight:700;
+    color:#7A5C3E;
+}
+
+.form-curva input {
+    border:1px solid #E8D9C8;
+    border-radius:8px;
+    padding:9px 10px;
+    font-family:inherit;
+}
+
+.pagina-error {
+    min-height:100vh;
+    margin:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#FAF7F4;
+    font-family:Arial, sans-serif;
+    color:#2C1A0A;
+    padding:16px;
+}
+
+.caja-error {
+    background:white;
+    border:1px solid #E8D9C8;
+    border-radius:16px;
+    padding:40px 36px;
+    max-width:520px;
+    text-align:center;
+    box-shadow:0 20px 40px rgba(79,47,14,.08);
+}
+
+.logo-error {
+    height:56px;
+    margin-bottom:12px;
+}
+
+.codigo-error {
+    display:inline-block;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:#8B2A1A;
+    background:#FDF0EE;
+    padding:4px 10px;
+    border-radius:999px;
+}
+
+.caja-error h1 {
+    font-size:24px;
+    margin:14px 0 8px;
+}
+
+.caja-error p {
+    color:#7A5C3E;
+    line-height:1.5;
+}
+
+.detalle-error {
+    background:#FAF7F4;
+    border-radius:8px;
+    padding:10px 12px;
+    font-size:14px;
+}
+
+.acciones-error {
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    margin-top:24px;
+    flex-wrap:wrap;
+}
+
+.boton-error {
+    text-decoration:none;
+    background:#6E4620;
+    color:white;
+    padding:11px 18px;
+    border-radius:10px;
+    font-weight:700;
+    font-size:14px;
+}
+
+.boton-error.secundario {
+    background:white;
+    color:#6E4620;
+    border:1px solid #E8D9C8;
+}
+
+.hero-actions-wrap {
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    justify-content:flex-end;
+    align-content:flex-start;
+    max-width:520px;
+}
+
+.seccion-presupuesto {
+    margin-bottom:24px;
+}
+
+.opciones-clase {
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+    font-size:13px;
+}
+
+.opciones-clase label {
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-weight:600;
+}
+
+.ayuda-campo {
+    display:block;
+    margin-top:4px;
+    font-size:12px;
+    color:#8A7058;
+}
+
+.barra-mini {
+    width:90px;
+    height:8px;
+    background:#EFE5D9;
+    border-radius:999px;
+    overflow:hidden;
+}
+
+.barra-mini div {
+    height:100%;
+    background:#2F6B27;
+}
+
+.barra-mini .riesgo {
+    background:#B7791F;
+}
+
+.barra-mini .sobrecosto {
+    background:#8B2A1A;
+}
+
+.texto-rojo {
+    color:#8B2A1A;
+}
+
+.texto-verde {
+    color:#2F6B27;
+}
+
+.fila-total td {
+    background:#FAF7F4;
+    border-top:2px solid #E8D9C8;
+}
+
+.btn-aprobar {
+    background:#EEF6EC;
+    color:#2F6B27;
+}
+
+.alerta-inventario {
+    display:block;
+    margin-top:4px;
+    font-size:11px;
+    font-weight:700;
+    color:#8B2A1A;
+}
+
+.filtros-auditoria {
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    align-items:center;
+}
+
+.filtros-auditoria select,
+.filtros-auditoria input {
+    border:1px solid #E8D9C8;
+    border-radius:8px;
+    padding:8px 10px;
+    font-family:inherit;
+    background:white;
+}
+
+.celda-cambios {
+    font-size:12px;
+    max-width:420px;
+}
+
+.celda-cambios code {
+    background:#FAF7F4;
+    padding:1px 4px;
+    border-radius:4px;
+}
+
+.seccion-presupuesto td strong + span {
+    display:block;
+    font-size:12px;
+    color:#8A7058;
+}
